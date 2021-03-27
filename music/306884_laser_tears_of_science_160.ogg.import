@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/306884_laser_tears_of_science_160.ogg-23bdef835b3989429cac19b58df33658.oggstr"
+
+[deps]
+
+source_file="res://music/306884_laser_tears_of_science_160.ogg"
+dest_files=[ "res://.import/306884_laser_tears_of_science_160.ogg-23bdef835b3989429cac19b58df33658.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

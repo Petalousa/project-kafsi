@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/corridor.obj-d05a4f666d8e485aa753c61aecd06b5a.mesh"
+
+[deps]
+
+files=[ "res://.import/corridor.obj-d05a4f666d8e485aa753c61aecd06b5a.mesh" ]
+
+source_file="res://meshes/kenney_spacecraft/corridor.obj"
+dest_files=[ "res://.import/corridor.obj-d05a4f666d8e485aa753c61aecd06b5a.mesh", "res://.import/corridor.obj-d05a4f666d8e485aa753c61aecd06b5a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

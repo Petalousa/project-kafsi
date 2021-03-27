@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/EnemyKamikaze.gd" type="Script" id=1]
+[ext_resource path="res://meshes/kenney_spacecraft/craft_speederA.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 1.03654
+height = 2.35619
+
+[node name="EnemyKamikaze" type="MeshInstance" groups=[
+"enemy",
+]]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 5, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+script = ExtResource( 1 )
+charge_colour = Color( 0.686275, 0, 1, 1 )
+attack_colour = Color( 1, 0.819608, 0.00392157, 1 )
+
+[node name="Area" type="Area" parent="." groups=[
+"enemy",
+]]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" groups=[
+"enemy",
+]]
+shape = SubResource( 1 )
+
+[node name="ChargeLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91335e-07, 0.913206, -0.156246 )
+light_color = Color( 0.415686, 0, 0.752941, 1 )
+light_energy = 0.1
+
+[node name="AttackLight1" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21011e-06, 0.269622, 1.12897 )
+light_color = Color( 0.415686, 0, 0.752941, 1 )
+light_energy = 0.1
+
+[node name="AttackLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91335e-07, -0.132592, -0.156246 )
+light_color = Color( 0.415686, 0, 0.752941, 1 )
+light_energy = 0.1
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]

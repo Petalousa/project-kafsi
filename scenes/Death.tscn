@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/Raleway-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Death.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.0235294, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.198
+margin_left = 5.0
+margin_top = 30.0
+margin_right = -5.0
+margin_bottom = -5.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Over
+Your final score: "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_top = 0.28
+anchor_right = 1.0
+anchor_bottom = 0.458
+margin_left = 5.0
+margin_right = -5.0
+margin_bottom = 0.199982
+custom_fonts/font = SubResource( 1 )
+text = "100000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="."]
+anchor_right = 0.3
+anchor_bottom = 1.0
+margin_left = 47.6789
+margin_top = 205.133
+margin_right = -0.385071
+margin_bottom = -300.867
+rect_pivot_offset = Vector2( 176.207, 73.7316 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Label" parent="RestartButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "RESTART"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="."]
+anchor_left = 0.7
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 205.0
+margin_right = -47.0
+margin_bottom = -304.0
+rect_pivot_offset = Vector2( 176.207, 73.7316 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Label" parent="QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "QUIT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Music licenced under Creative Commons 3.0
+(https://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+Laser Tears of Science - created by GameBalance
+	retrieved from Newgrounds: https://www.newgrounds.com/audio/listen/306884
+	
+	3D models licensed under Creative Commons Zero, CC0
+	(http://creativecommons.org/publicdomain/zero/1.0/)
+	
+	www.kenney.nl"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
